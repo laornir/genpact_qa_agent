@@ -1,7 +1,6 @@
 # University QA Agent — Planning Document
 
 > This document captures all design decisions made during planning.
-> Paste it as the first message in Claude Code to transfer full context.
 
 ---
 

@@ -200,7 +200,7 @@ The classifier immediately returns `out_of_scope`. The graph exits after a singl
 
 > *"Update the score of Eve Adams in Algorithms course of semester Spring 2025 to 100"*
 
-The question is classified as answerable but the LLM, instructed to emit only SELECT statements, wraps its refusal in a non-SQL response. The SQL validator's whitelist guard (`Only SELECT queries are permitted`) catches it immediately and returns an error — no rows are modified.
+The question is classified as answerable but the LLM, instructed to emit only SELECT statements, wraps its refusal in a non-SQL response. While there is a dedicated guardrail to prevent malitious SQL queries, this request is blocked by the sql_generator, following the instruction to generate only SELECT queries.
 
 [LangSmith trace](https://smith.langchain.com/public/6883e5e8-57b6-4102-b901-06b42cf3fb3a/r)
 
